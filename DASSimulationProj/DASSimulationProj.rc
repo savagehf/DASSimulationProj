@@ -1,0 +1,1176 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\DASSimulation.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""afxribbon.rc""              // MFC ribbon and control bar resources\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_LEFT_OUTPUT DIALOGEX 0, 0, 86, 397
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "用户注册",IDC_BTN_REGISTER,0,337,41,14,NOT WS_VISIBLE
+    PUSHBUTTON      "用户登陆",IDC_BTN_LOGIN,12,313,46,15,NOT WS_VISIBLE
+    PUSHBUTTON      "DAS任务查询",IDC_BTN_DAS_TASK_QUERY,38,332,46,13,NOT WS_VISIBLE
+    PUSHBUTTON      "DAF服务申请",IDC_BTN_MAF_FORWORD,5,8,75,24
+    PUSHBUTTON      "DAR服务申请",IDC_BTN_MAR_DEFORWORD,5,45,75,24
+    PUSHBUTTON      "DAS系统介绍",IDC_BTN_DAS_INTRODUCE,5,227,75,24
+    PUSHBUTTON      "可见窗口仿真",IDC_BTN_US_VIEW_WND_SIM,11,356,48,15,NOT WS_VISIBLE
+    PUSHBUTTON      "DAS系统设置",IDC_BTN_DAS_SETTING,7,377,56,13,NOT WS_VISIBLE
+    PUSHBUTTON      "退出系统",IDC_BTN_DAS_LOGOUT,37,369,47,11,NOT WS_VISIBLE
+    PUSHBUTTON      "任务调度表查询",IDC_BTN_SET_SYS_TIME,5,153,75,24
+    PUSHBUTTON      "设置系统时间及倍率",IDC_BTN_SETTING_TIMES,5,190,75,24
+    PUSHBUTTON      "系统结构图",IDC_BTN_DAS_SYSTEM,5,264,75,24
+    PUSHBUTTON      "双向服务模式",IDC_DAFDAR_MODE,5,80,75,24
+    PUSHBUTTON      "突发返向模式",IDC_UNEXPECT_MODE,5,116,75,24
+END
+
+IDD_DLG_MAF_REQUEST DIALOGEX 0, 0, 646, 239
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAS任务查询"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "服务规划请求",ID_QUERY_TASK,266,50,64,26
+    LTEXT           "窗口开始时间：",IDC_STATIC,18,16,57,8
+    LTEXT           "窗口结束时间：",IDC_STATIC,17,33,57,8
+    CONTROL         "DateTimePicker1",IDC_DATEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,74,15,80,13
+    CONTROL         "DateTimePicker2",IDC_TIMEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,169,15,80,13
+    CONTROL         "DateTimePicker1",IDC_DATEPICKER_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,74,30,80,13
+    CONTROL         "DateTimePicker2",IDC_TIMEPICKER_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,169,30,80,13
+    LTEXT           "TDRS：",IDC_STATIC,111,50,28,8
+    COMBOBOX        IDC_COMBO_TASK_STATUS,213,63,40,13,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "任务状态：",IDC_STATIC,213,52,42,8
+    CONTROL         "List1",IDC_LIST_TASK,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,15,91,315,115
+    GROUPBOX        "查询条件",IDC_STATIC,11,5,322,74
+    COMBOBOX        IDC_COM_TASK_TYPE,59,47,50,78,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "任务类型：",IDC_STATIC,18,50,41,10
+    COMBOBOX        IDC_COMBO_TDRS_QUERY,147,48,46,12,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LIST_TDRSS_TUT,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,346,10,296,112
+    CONTROL         "List1",IDC_LIST_EMPTY_WIN,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,347,134,296,99
+    PUSHBUTTON      "生成UP可用时间段",IDC_BTN_MAF_CREATE_UP_TIME,253,215,79,23
+    LTEXT           "用户SIC：",IDC_STATIC,20,64,46,11
+    LTEXT           "任务SSC：",IDC_STATIC,109,66,41,10
+    EDITTEXT        IDC_EDIT_MAF_TASK_SSC,147,63,53,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_QUERY_SIC,59,63,49,12,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "TUT：",IDC_STATIC,342,1,302,123
+    GROUPBOX        "TDRS-卫星可见性时间段：",IDC_STATIC,339,124,306,112
+    GROUPBOX        "任务列表：",IDC_STATIC,11,80,323,133
+END
+
+IDD_DLG_INTRODUCE_MAF_MAR DIALOGEX 0, 0, 345, 233
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Das业务介绍"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "普通前向",ID_DAS_MAF,76,4,50,14
+    PUSHBUTTON      "普通返向",ID_DAS_MAR,194,4,50,14
+    LTEXT           "Static",IDC_HTML_PAGE,1,25,342,205,SS_SUNKEN
+END
+
+IDD_DLG_MAR_REQUEST DIALOGEX 0, 0, 372, 303
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR任务查询和创建"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "窗口开始时间：",IDC_STATIC,11,13,57,8
+    LTEXT           "窗口结束时间：",IDC_STATIC,11,30,57,8
+    LTEXT           "用户星SIC：",IDC_STATIC,139,51,44,8
+    CONTROL         "",IDC_MAR_DATEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,74,11,80,13
+    CONTROL         "",IDC_MAR_TIMEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,169,11,80,13
+    CONTROL         "",IDC_MAR_DATEPICKER_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,74,28,80,13
+    CONTROL         "",IDC_MAR_TIMEPICKER_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,169,28,80,13
+    COMBOBOX        IDC_MAR_COMBO_TDRS,74,48,56,13,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MAR_COMBO_SIC,194,49,56,13,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "中继星TDRS：",IDC_STATIC,11,50,54,8
+    GROUPBOX        "服务时间段",IDC_STATIC,4,2,366,64
+    GROUPBOX        "用户星与TDRS可见性时间段：",IDC_STATIC,3,171,365,106
+    CONTROL         "",IDC_LIST_MAR_US_VIS_TABLE,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,8,179,355,95
+    PUSHBUTTON      "生成UP可用时间段",IDC_BTN_MAR_CREATE_UP_TIME,286,278,81,25
+    CONTROL         "专用用户",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,141,277,59,12
+    CONTROL         "非专用用户",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,141,290,53,12
+    PUSHBUTTON      "服务规划请求",IDC_BTN_MAR_SERVICE_PLAN_REQ,287,41,78,23
+    GROUPBOX        "任务列表",IDC_STATIC,3,67,364,103
+    LTEXT           "SSC：",IDC_STATIC,271,10,26,11
+    EDITTEXT        IDC_EDIT_MAR_SSC,270,21,76,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_LIST_MAR_TASK_CTRL,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,10,78,354,90
+END
+
+IDD_DLG_MAR_PHASE_1 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR：服务规划阶段（一）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_MAR_PHASE_2 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR：服务请求阶段（二）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAR2_PAUSE_FLASH,498,1,50,13
+END
+
+IDD_DLG_MAR_PHASE_3 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR：服务准备阶段（三）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAR3_PAUSE_FLASH,496,0,49,16
+END
+
+IDD_DLG_MAR_PHASE_4 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR：服务实施阶段（四）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_MAR_PHASE_5 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR：用户数据传输阶段（五）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_MAR_PHASE_6 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR：服务终止阶段（六）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAR6_PAUSE_FLASH,499,0,51,16
+END
+
+IDD_DLG_MAF_PHASE_1 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF：服务规划阶段（一）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_PAUSE_MAF1,497,1,49,14
+END
+
+IDD_DLG_MAF_PHASE_2 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF：服务请求阶段（二）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAF2_PAUSE_FLASH,494,2,52,14
+END
+
+IDD_DLG_MAF_PHASE_3 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF：服务准备阶段（三）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAF3_PAUSE_FLASH,493,1,49,15
+END
+
+IDD_DLG_MAF_PHASE_4 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF：服务实施阶段（四）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_MAF_PHASE_5 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF：用户数据传送阶段（五）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_MAF_PHASE_6 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF：服务终止阶段（六）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAF6_PAUSE_FLASH,500,0,45,16
+END
+
+IDD_DLG_CREATE_TASK_WITH_USABLE_TIME DIALOGEX 0, 0, 306, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "US-TDRS可用时间段："
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "服务开始时间：",IDC_STATIC,8,199,57,8
+    LTEXT           "服务结束时间：",IDC_STATIC,8,212,57,8
+    CONTROL         "DateTimePicker1",IDC_DATEPICKER_SERIVCE_START_DATE,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,68,194,80,13
+    CONTROL         "DateTimePicker2",IDC_DATEPICKER_SERIVCE_START_TIME,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,149,194,80,13
+    CONTROL         "DateTimePicker1",IDC_DATEPICKER_SERIVCE_END_DATE,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,68,210,80,13
+    CONTROL         "DateTimePicker2",IDC_DATEPICKER_SERIVCE_END_TIME,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,150,209,80,13
+    LTEXT           "窗口开始时间：",IDC_STATIC,19,127,57,8
+    LTEXT           "窗口结束时间：",IDC_STATIC,18,141,57,8
+    EDITTEXT        IDC_EDIT_WINDOW_START_DATETIME,80,124,146,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_WINDOW_END_DATETIME,80,139,146,13,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "可用时间窗口：",IDC_STATIC,4,103,229,54
+    GROUPBOX        "DAF服务请求信息：",IDC_STATIC,5,155,229,71
+    LTEXT           "TDRS：",IDC_STATIC,48,112,28,8
+    EDITTEXT        IDC_EDIT_TDRS,80,110,61,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "SIC：",IDC_STATIC,13,166,20,8
+    EDITTEXT        IDC_EDIT_SIC,69,164,61,13,ES_AUTOHSCROLL
+    LTEXT           "SSC：",IDC_STATIC,141,164,23,8
+    EDITTEXT        IDC_EDIT_SSC,168,161,61,13,ES_AUTOHSCROLL
+    LTEXT           "服务级别：",IDC_STATIC,8,182,43,10
+    COMBOBOX        IDC_COMBO_SERVICE_LEVEL,68,179,62,88,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "通道ID：",IDC_STATIC,137,179,33,9,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_MAR_CHANNEL,168,176,62,14,CBS_DROPDOWN | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LIST_UP_TDRS_USABLE_TIME,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,13,296,88
+    LTEXT           "卫星-中继星可用时间段：",IDC_STATIC,6,3,93,8
+    PUSHBUTTON      "创建任务",IDC_BTN_APPLY_REQUEST,240,200,60,23
+END
+
+IDD_DLG_SETTIME_TO_START_TASK DIALOGEX 0, 0, 349, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "任务调度表查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_DATEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,78,182,80,13
+    CONTROL         "DateTimePicker2",IDC_TIMEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,162,182,80,13
+    DEFPUSHBUTTON   "设置系统当前时间",IDOK,268,179,75,18
+    LTEXT           "设置系统时间：",IDC_STATIC,5,183,64,13
+    CONTROL         "",IDC_LIST_ALL_TASK,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,3,16,342,143
+    LTEXT           "系统所有任务列表：",IDC_STATIC,5,3,85,8
+    EDITTEXT        IDC_EDIT_TASK_STATUS,79,163,71,15,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "任务状态：",IDC_STATIC,3,165,60,13
+END
+
+IDD_DLG_MAF_TERMINATION DIALOGEX 0, 0, 550, 382
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAF服务规划阶段"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_PAUSE_MAF_FLASH,493,1,50,16
+END
+
+IDD_DLG_MAR_TERMINATION DIALOGEX 0, 0, 591, 401
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DAR服务规划阶段（一）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_PAUSE_MAR_FLASH,533,0,51,15
+END
+
+IDD_DLG_INTRODUCE_MODULES DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统结构图"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_SETTING_VIEW_TIME DIALOGEX 0, 0, 294, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置系统时间及倍率"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_DATEPICKER_START_SHOWTIME,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,19,42,80,13
+    CONTROL         "DateTimePicker2",IDC_TIMEPICKER_START_SHOWTIME,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,111,42,80,13
+    PUSHBUTTON      "设置",IDC_BTN_SET_SHOW_TIME,211,109,63,18,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_SETTING_TIME_VEL,71,88,70,14,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "时间倍率：",IDC_STATIC,21,90,44,12
+    LTEXT           "系统时间：",IDC_STATIC,20,27,67,10
+    GROUPBOX        "设置系统时间",IDC_STATIC,14,11,261,53
+    GROUPBOX        "设置时间倍率",IDC_STATIC,15,72,258,36
+    PUSHBUTTON      "设置系统时间",IDC_BTN_SETTING_SIMULATE_TIME_DAS,209,41,55,15
+    PUSHBUTTON      "设置时间倍率",IDC_BTN_SETTING_TIME_FREQUENCY_DAS,209,88,55,15
+END
+
+IDD_DLG_INTRODUCE_SYSTEM DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_MAFMAR_QUERY DIALOGEX 0, 0, 351, 301
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "双向任务查询和创建"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "窗口开始时间：",IDC_STATIC,5,11,57,8
+    LTEXT           "窗口结束时间：",IDC_STATIC,5,28,57,8
+    LTEXT           "用户星SIC：",IDC_STATIC,133,46,44,8
+    CONTROL         "",IDC_MAFMAR_DATEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,68,9,80,13
+    CONTROL         "",IDC_MAFMAR_TIMEPICKER_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,163,9,80,13
+    CONTROL         "",IDC_MAFMAR_DATEPICKER_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | WS_TABSTOP,68,26,80,13
+    CONTROL         "",IDC_MAFMAR_TIMEPICKER_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_APPCANPARSE | WS_TABSTOP | 0x8,163,26,80,13
+    COMBOBOX        IDC_MAFMAR_COMBO_TDRS,68,43,56,13,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MAFMAR_COMBO_SIC,175,43,67,13,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "中继星TDRS：",IDC_STATIC,5,45,54,8
+    GROUPBOX        "服务时间段",IDC_STATIC,0,0,347,62
+    PUSHBUTTON      "服务规划请求",IDC_MAFMAR_PLAN_REQ,265,41,73,20
+    LTEXT           "SSC：",IDC_STATIC,265,9,26,11
+    EDITTEXT        IDC_MAFMAR_EDIT_MAR_SSC,263,19,76,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "生成UP可用时间段",IDC_BTN_MAFMAR_CREATE_UP_TIME,273,280,76,19
+    GROUPBOX        "用户星与TDRS可见性时间段：",IDC_STATIC,1,173,349,106
+    CONTROL         "",IDC_LIST_MAFMAR_TASK_CTRL,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,73,341,96
+    GROUPBOX        "任务列表",IDC_STATIC,1,63,349,108
+    CONTROL         "",IDC_LIST_MAFMAR_US_VIS_TABLE,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,182,342,95
+END
+
+IDD_DLG_MAFMAR_TERMINATION DIALOGEX 0, 0, 551, 382
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "双向服务规划阶段"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_PAUSE_MAFMAR_FLASH,494,7,50,16
+END
+
+IDD_DLG_MAFMAR_PHASE_2 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "双向服务请求阶段（二）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAFMAR2_PAUSE_FLASH,493,14,50,13
+END
+
+IDD_DLG_MAFMAR_PHASE_3 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "双向服务准备阶段（三）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAFMAR3_PAUSE_FLASH,495,4,49,15
+END
+
+IDD_DLG_MAFMAR_PHASE_6 DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "双向服务终止阶段（六）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "暂停",IDC_BTN_MAFMAR6_PAUSE_FLASH,500,0,45,16
+END
+
+IDD_DLG_UNEXPECTED_MAR_REQ DIALOGEX 0, 0, 305, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "突发返向任务调度"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_UNEXPECTED_MAR_TASK,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,4,13,296,115
+    LTEXT           "UP请求发起突发返向数据传输模式，是否接受该请求?",IDC_STATIC,4,135,210,13
+    PUSHBUTTON      "拒绝",IDC_BTN_DENY_UNEXPECT_MAR,162,144,63,19
+    PUSHBUTTON      "确定",IDC_BTN_ACCEPT_UNEXPECTED_MAR,238,144,63,19
+    LTEXT           "突发返向任务列表",IDC_STATIC,5,2,146,9
+END
+
+IDD_DLG_UNEXPETECTED_2D_SHOW DIALOGEX 0, 0, 550, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "突发返向模式"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_LEFT_OUTPUT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 84
+        BOTTOMMARGIN, 390
+    END
+
+    IDD_DLG_MAF_REQUEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+
+    IDD_DLG_INTRODUCE_MAF_MAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 343
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_DLG_MAR_PHASE_1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAR_PHASE_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 548
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAR_PHASE_3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 545
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAR_PHASE_4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAR_PHASE_5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAR_PHASE_6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAF_PHASE_1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 546
+    END
+
+    IDD_DLG_MAF_PHASE_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 546
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAF_PHASE_3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 549
+        BOTTOMMARGIN, 381
+    END
+
+    IDD_DLG_MAF_PHASE_4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAF_PHASE_5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAF_PHASE_6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 548
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAF_TERMINATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        BOTTOMMARGIN, 375
+    END
+
+    IDD_DLG_MAR_TERMINATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 584
+        BOTTOMMARGIN, 394
+    END
+
+    IDD_DLG_INTRODUCE_MODULES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_SETTING_VIEW_TIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_DLG_INTRODUCE_SYSTEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_DLG_MAFMAR_TERMINATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 544
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 375
+    END
+
+    IDD_DLG_MAFMAR_PHASE_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAFMAR_PHASE_3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+
+    IDD_DLG_MAFMAR_PHASE_6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 1
+    END
+
+    IDD_DLG_UNEXPETECTED_2D_SHOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 543
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars and Docking Windows"
+        BEGIN
+            MENUITEM "<placeholder>",               ID_VIEW_TOOLBAR
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS_2005
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About DASSimulation...",     ID_APP_ABOUT
+    END
+    POPUP "DAF"
+    BEGIN
+        MENUITEM "模拟六个阶段",                      ID_MAF_SHOWALL
+        MENUITEM "关闭循环展示",                      ID_MAF_CLOSE_LOOP_PLAY
+    END
+    POPUP "DAR"
+    BEGIN
+        MENUITEM "模拟六个阶段",                      ID_MAR_SHOWALL
+        MENUITEM "关闭循环展示",                      ID_MAR_CLOSE_LOOP_PLAY
+    END
+    POPUP "系统说明"
+    BEGIN
+        MENUITEM "系统结构图",                       ID_SYS_STRUCTRUE
+    END
+    POPUP "左边功能窗口"
+    BEGIN
+        MENUITEM "显示功能窗口(Ctrl+L)",              ID_SHOW_LEFT_DOCKPANE
+        MENUITEM "隐藏功能窗口(Ctrl+L)",              ID_HIDE_LEFT_DOCKPANE
+    END
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DASSimulation"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "DASSimulation, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_EDIT MENU 
+BEGIN
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+END
+
+IDR_POPUP_SORT MENU 
+BEGIN
+    POPUP "Sorting"
+    BEGIN
+        MENUITEM "&Sort Alphabeticaly",         ID_SORTING_SORTALPHABETIC
+        MENUITEM "Sort by &Type",               ID_SORTING_SORTBYTYPE
+        MENUITEM "Sort by Acc&ess",             ID_SORTING_SORTBYACCESS
+        MENUITEM "Group by t&ype",              ID_SORTING_GROUPBYTYPE
+    END
+END
+
+IDR_POPUP_EXPLORER MENU 
+BEGIN
+    POPUP "Explorer"
+    BEGIN
+        MENUITEM "&Open",                       ID_OPEN
+        MENUITEM "Open &With....",              ID_OPEN_WITH
+        MENUITEM SEPARATOR
+        MENUITEM "&Compile",                    ID_DUMMY_COMPILE
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Remove",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties...",              ID_PROPERTIES
+    END
+END
+
+IDR_THEME_MENU MENU 
+BEGIN
+    MENUITEM "Office 2007 (&Blue Style)",   ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007 (B&lack Style)",  ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007 (&Silver Style)", ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007 (&Aqua Style)",   ID_VIEW_APPLOOK_OFF_2007_AQUA
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DASSimulationProj.ico"
+IDR_DASSimulationPrTYPE ICON                    "res\\DASSimulationDoc.ico"
+IDI_FILE_VIEW           ICON                    "res\\file_view.ico"
+IDI_FILE_VIEW_HC        ICON                    "res\\file_view_hc.ico"
+IDI_CLASS_VIEW          ICON                    "res\\class_view.ico"
+IDI_CLASS_VIEW_HC       ICON                    "res\\class_view_hc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+IDR_SORT                BITMAP                  "res\\sort.bmp"
+IDB_SORT_24             BITMAP                  "res\\sort_hc.bmp"
+IDB_FILE_VIEW           BITMAP                  "res\\fileview.bmp"
+IDB_FILE_VIEW_24        BITMAP                  "res\\fileview_hc.bmp"
+IDB_CLASS_VIEW          BITMAP                  "res\\classview.bmp"
+IDB_CLASS_VIEW_24       BITMAP                  "res\\classview_hc.bmp"
+IDR_EXPLORER            BITMAP                  "res\\explorer.bmp"
+IDB_EXPLORER_24         BITMAP                  "res\\explorer_hc.bmp"
+IDR_MENU_IMAGES         BITMAP                  "res\\menuimages.bmp"
+IDB_MENU_IMAGES_24      BITMAP                  "res\\menuimages_hc.bmp"
+IDB_MAF_PHASE_1_BITMAP  BITMAP                  "res\\daf1.bmp"
+IDB_MAF_PHASE_2_BITMAP  BITMAP                  "res\\daf2.bmp"
+IDB_MAF_PHASE_3_BITMAP  BITMAP                  "res\\daf3.bmp"
+IDB_MAF_PHASE_4_BITMAP  BITMAP                  "res\\daf4.bmp"
+IDB_MAF_PHASE_5_BITMAP  BITMAP                  "res\\daf5.bmp"
+IDB_MAF_PHASE_6_BITMAP  BITMAP                  "res\\daf6.bmp"
+IDB_MAR_PHASE_1_BITMAP  BITMAP                  "res\\dar1.bmp"
+IDB_MAR_PHASE_2_BITMAP  BITMAP                  "res\\dar2.bmp"
+IDB_MAR_PHASE_3_BITMAP  BITMAP                  "res\\dar3.bmp"
+IDB_MAR_PHASE_4_BITMAP  BITMAP                  "res\\dar4.bmp"
+IDB_MAR_PHASE_5_BITMAP  BITMAP                  "res\\dar5.bmp"
+IDB_MAR_PHASE_6_BITMAP  BITMAP                  "res\\dar6.bmp"
+IDB_MAF_MAR_TERMINATION BITMAP                  "res\\termina.bmp"
+IDB_DAS_SYSTEM          BITMAP                  "res\\DAS.bmp"
+IDB_MAFMAR_PAHSE_3_BITMAP BITMAP                  "res\\DAS.bmp"
+IDB_MAFMAR_PHASE_6_BITMAP BITMAP                  "res\\DAS.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_MAINFRAME_256 TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_SORT TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_SORT_MENU
+    BUTTON      ID_NEW_FOLDER
+END
+
+IDR_EXPLORER TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_PROPERTIES
+END
+
+IDR_MENU_IMAGES TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_WINDOW_MANAGER
+    SEPARATOR
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_TOOLS_MACRO
+    BUTTON      ID_SORTING_SORTALPHABETIC
+    BUTTON      ID_SORTING_SORTBYTYPE
+    BUTTON      ID_SORTING_SORTBYACCESS
+    BUTTON      ID_SORTING_GROUPBYTYPE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DASSimulation.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "DASSimulation.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLG_DAS_VISIBILITY_REQUEST DLGINIT
+BEGIN
+    IDC_COMBO_SIC, 0x403, 4, 0
+0x3030, 0x0031, 
+    IDC_COMBO_SIC, 0x403, 4, 0
+0x3030, 0x0032, 
+    IDC_COMBO_SIC, 0x403, 4, 0
+0x3030, 0x0033, 
+    IDC_COMBO_TDRS, 0x403, 3, 0
+0x3123, "\000" 
+    0
+END
+
+IDD_DLG_MAF_REQUEST DLGINIT
+BEGIN
+    IDC_COMBO_TDRS, 0x403, 3, 0
+0x3123, "\000" 
+    IDC_COMBO_TASK_STATUS, 0x403, 11, 0
+0x2d31, 0xf9cb, 0xd0d3, 0xcec8, 0xf1ce, "\000" 
+    IDC_COMBO_TASK_STATUS, 0x403, 9, 0
+0x2d32, 0xfdb4, 0xb4d6, 0xd0d0, "\000" 
+    IDC_COMBO_TASK_STATUS, 0x403, 9, 0
+0x2d33, 0xb4d6, 0xd0d0, 0xd0d6, "\000" 
+    IDC_COMBO_TASK_STATUS, 0x403, 9, 0
+0x2d34, 0xd1d2, 0xe1bd, 0xf8ca, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "DASSimulation\n\nDASSimulationPr\n\n\nDASSimulation.Document\nDASSimulation.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "DASSimulation"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATUS_PANE1        "Pane 1"
+    IDS_STATUS_PANE2        "Pane 2"
+    IDS_TOOLBAR_STANDARD    "Standard"
+    IDS_TOOLBAR_CUSTOMIZE   "Customize..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILE_VIEW           "DAS View"
+    IDS_CLASS_VIEW          "Class View"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXPLORER            "Explorer"
+    IDS_EDIT_MENU           "Edit"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\DASSimulationProj.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#if !defined(_AFXDLL)
+#include "afxribbon.rc"              // MFC ribbon and control bar resources
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
